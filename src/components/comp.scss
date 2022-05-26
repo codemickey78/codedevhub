@@ -1,0 +1,16 @@
+@import "../index.scss";
+.main-navbar {
+  background-color: var(--main-blue) !important;
+  .mnav-link {
+    color: #fff !important;
+    font-size: 1.3rem;
+  }
+  .mnav-link:hover {
+    color: var(--main-gold) !important;
+  }
+  .btn-github{
+      background-color: var(--main-gold);
+      color: #fff;
+      border-radius: 40px;
+  }
+}

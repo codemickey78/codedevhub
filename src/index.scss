@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'il';
+    src: url('./assets/fonts/IBMPlexMono-Light.ttf');
+}
+@font-face {
+    font-family: 'ib';
+    src: url('./assets/fonts/IBMPlexMono-Bold.ttf');
+}
+@font-face {
+    font-family: 'ir';
+    src: url('./assets/fonts/IBMPlexMono-Regular.ttf');
+}
+
+*{
+    font-family: ir;
+}
+
+:root {
+  --main-gold: #ffc600;
+  --main-blue: #072ac8;
+}
