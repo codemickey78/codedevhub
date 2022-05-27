@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
@@ -6,8 +6,14 @@ import { Button } from "react-bootstrap";
 import { GoMarkGithub } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import "./comp.scss";
+import config from "../config";
 
 const MainNavbar = () => {
+  const [activeNav, setActiveNav] = useState(0);
+
+  const handleActiveNav = (eventKey: any) => {
+    setActiveNav(eventKey);
+  };
   return (
     <div>
       <>
@@ -18,21 +24,37 @@ const MainNavbar = () => {
             </Navbar.Brand>
             <Navbar.Collapse id="navbarScroll">
               <Nav
+                activeKey={activeNav}
+                onSelect={handleActiveNav}
+                defaultActiveKey={activeNav}
                 className="mx-auto my-2 my-lg-0"
                 style={{ maxHeight: "100px" }}
                 navbarScroll
               >
-                <Nav.Link as={NavLink} to="/" className="mnav-link">
+                <Nav.Link
+                  eventKey="home"
+                  as={NavLink}
+                  to="/"
+                  className="mnav-link"
+                >
                   Home
                 </Nav.Link>
-                <Nav.Link as={NavLink} to="/about" className="mnav-link">
+                <Nav.Link
+                  eventKey="about"
+                  as={NavLink}
+                  to="/about"
+                  className="mnav-link"
+                >
                   About Me
                 </Nav.Link>
               </Nav>
               <div>
-                <Button className="btn-github border-0">
+                <a
+                  href={config.GithubRepo} target="_blank"
+                  className="btn-github btn border-0 text-dark" rel="noreferrer"
+                >
                   <GoMarkGithub /> View on GitHub
-                </Button>
+                </a>
               </div>
             </Navbar.Collapse>
           </Container>

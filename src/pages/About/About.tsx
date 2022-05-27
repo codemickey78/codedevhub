@@ -1,12 +1,9 @@
 import React from "react";
-// import Header from "../../layouts/Header/Header";
-
-type Props = {};
-
-const About = (props: Props) => {
+import Header from "../../layouts/Header/Header";
+const About = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div>
         About Page
       </div>

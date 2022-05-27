@@ -8,9 +8,37 @@
   .mnav-link:hover {
     color: var(--main-gold) !important;
   }
-  .btn-github{
-      background-color: var(--main-gold);
-      color: #fff;
-      border-radius: 40px;
+  .mnav-link.active {
+    color: var(--main-gold) !important;
+  }
+  .btn-github {
+    background-color: var(--main-gold);
+    color: #fff;
+    border-radius: 40px;
+  }
+}
+.main-card {
+  box-shadow: 0 16px 4px rgba($color: #000000, $alpha: 0.09);
+  border-radius: 20px;
+  .mc-title {
+    font-family: ib;
+  }
+  span.badge {
+    font-size: 0.7rem;
+  }
+  .mc-date {
+    background-color: transparent !important;
+    color: #333;
+  }
+  img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  .mc-read {
+    border: 0;
+  }
+  .mc-read:hover {
+    background-color: var(--main-gold) !important;
+    color: #000000;
   }
 }
