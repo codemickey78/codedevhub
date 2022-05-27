@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
-import { Button } from "react-bootstrap";
 import { GoMarkGithub } from "react-icons/go";
 import { NavLink } from "react-router-dom";
 import "./comp.scss";
@@ -19,7 +18,7 @@ const MainNavbar = () => {
       <>
         <Navbar className="main-navbar">
           <Container>
-            <Navbar.Brand href="#home">
+            <Navbar.Brand as={NavLink} to="/">
               <img src={logo} alt="mainlogo" width={200} />
             </Navbar.Brand>
             <Navbar.Collapse id="navbarScroll">
@@ -50,8 +49,10 @@ const MainNavbar = () => {
               </Nav>
               <div>
                 <a
-                  href={config.GithubRepo} target="_blank"
-                  className="btn-github btn border-0 text-dark" rel="noreferrer"
+                  href={config.GithubRepo}
+                  target="_blank"
+                  className="btn-github btn border-0 text-dark"
+                  rel="noreferrer"
                 >
                   <GoMarkGithub /> View on GitHub
                 </a>

@@ -20,6 +20,12 @@
 .main-card {
   box-shadow: 0 16px 4px rgba($color: #000000, $alpha: 0.09);
   border-radius: 20px;
+  transition: all 0.2s ease;
+  overflow: hidden;
+  .card-body{
+    background-color: #fff;
+    z-index: 99;
+  }
   .mc-title {
     font-family: ib;
   }
@@ -31,6 +37,7 @@
     color: #333;
   }
   img {
+    transition: 0.2s ease-in-out;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
   }
@@ -39,6 +46,10 @@
   }
   .mc-read:hover {
     background-color: var(--main-gold) !important;
-    color: #000000;
+    color: #000000 !important;
   }
+}
+
+.main-card:hover .mc-img{
+  transform: scale(1.25) rotate(2deg);
 }
