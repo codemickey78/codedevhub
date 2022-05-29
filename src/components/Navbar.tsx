@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
 import { GoMarkGithub } from "react-icons/go";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./comp.scss";
 import config from "../config";
 
