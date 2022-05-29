@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Container } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
 import { GoMarkGithub } from "react-icons/go";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./comp.scss";
 import config from "../config";
 
@@ -16,12 +16,14 @@ const MainNavbar = () => {
   return (
     <div>
       <>
-        <Navbar className="main-navbar">
+        <Navbar className="main-navbar" expand="lg">
           <Container>
             <Navbar.Brand as={NavLink} to="/">
               <img src={logo} alt="mainlogo" width={200} />
             </Navbar.Brand>
-            <Navbar.Collapse id="navbarScroll">
+
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
               <Nav
                 activeKey={activeNav}
                 onSelect={handleActiveNav}
@@ -40,8 +42,8 @@ const MainNavbar = () => {
                 </Nav.Link>
                 <Nav.Link
                   eventKey="about"
-                  as={NavLink}
-                  to="/about"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/codemickey78/"
                   className="mnav-link"
                 >
                   About Me

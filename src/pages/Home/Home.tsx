@@ -5,7 +5,7 @@ import { Container, Nav } from "react-bootstrap";
 import NewsCard from "../../components/Card";
 import "../pages.scss";
 import { categories } from "../../data/dummyPosts";
-import { PostType } from "../../interfaces/Post";
+// import { PostType } from "../../interfaces/Post";
 import bgImg from "../../assets/img/bgImg.png";
 import getPost from '../../api/getPost';
 

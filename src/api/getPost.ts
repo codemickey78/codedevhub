@@ -11,6 +11,7 @@ const QUERY = gql`
                 title,
                 slug,
                 brief,
+                catergory,
                 content{
                 html
                 },
